@@ -82,6 +82,7 @@ const AITravelBuddyPage = () => {
       content: `Hi there! I'm your AI Travel Buddy, ready to help you explore the world. I'm currently in ${getPersonalityName(currentPersonality)} mode, which means I'll tailor my suggestions to match your travel style.`,
       timestamp: new Date(),
       aiPersonality: getPersonalityName(currentPersonality)
+      
     };
 
     setMessages([welcomeMessage]);
