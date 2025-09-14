@@ -73,8 +73,8 @@ const NavigationBar = () => {
   };
 
   const handleLogoClick = () => {
-    if (location?.pathname !== '/dashboard') {
-      window.location.href = '/dashboard';
+    if (location?.pathname !== '/') {
+      window.location.href = '/';
     }
   };
 
@@ -85,13 +85,18 @@ const NavigationBar = () => {
         <div className="flex items-center justify-between h-16 px-4 lg:px-6">
           {/* Logo */}
           <div className="flex items-center">
-            
+            <button
+              onClick={handleLogoClick}
+              className="flex items-center space-x-2 hover:opacity-80 transition-travel"
+              aria-label="TravelMate - Go to Dashboard"
+            >
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <Icon name="Compass" size={20} color="white" />
               </div>
               <span className="text-xl font-semibold text-foreground">
                 TravelMate AI
               </span>
+            </button>
           </div>
 
           {/* Desktop Navigation Items */}
