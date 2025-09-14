@@ -82,7 +82,7 @@ const AITravelBuddyPage = () => {
       content: `Hi there! I'm your AI Travel Buddy, ready to help you explore the world. I'm currently in ${getPersonalityName(currentPersonality)} mode, which means I'll tailor my suggestions to match your travel style.`,
       timestamp: new Date(),
       aiPersonality: getPersonalityName(currentPersonality)
-      
+
     };
 
     setMessages([welcomeMessage]);
@@ -148,7 +148,7 @@ const AITravelBuddyPage = () => {
             description: "Authentic local cuisine with great atmosphere",
             image: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
             rating: 4.5,
-            price: "$25-35",
+            price: "₹25000-35000",
             actions: [
               { label: "View Menu", action: "view_menu" },
               { label: "Get Directions", action: "navigate" }
@@ -159,7 +159,7 @@ const AITravelBuddyPage = () => {
             description: "Vibrant market with diverse food stalls",
             image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg",
             rating: 4.2,
-            price: "$5-15",
+            price: "₹5000-15000",
             actions: [
               { label: "Learn More", action: "learn_more" },
               { label: "Add to Itinerary", action: "add_itinerary" }
@@ -290,7 +290,7 @@ const AITravelBuddyPage = () => {
             <div className="bg-muted p-1 rounded-lg">
               <button
                 onClick={() => setActiveTab('chat')}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-travel ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-travel${
                   activeTab === 'chat' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'
                 }`}
               >

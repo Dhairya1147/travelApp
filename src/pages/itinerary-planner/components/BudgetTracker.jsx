@@ -124,7 +124,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
             <Icon name="Wallet" size={16} className="text-primary" />
             <span className="text-sm font-medium text-primary">Total Budget</span>
           </div>
-          <p className="text-2xl font-bold text-card-foreground">${totalBudget?.toLocaleString()}</p>
+          <p className="text-2xl font-bold text-card-foreground">₹{totalBudget?.toLocaleString()}</p>
         </div>
 
         <div className="bg-warning/5 rounded-lg p-4 border border-warning/20">
@@ -132,7 +132,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
             <Icon name="CreditCard" size={16} className="text-warning" />
             <span className="text-sm font-medium text-warning">Spent</span>
           </div>
-          <p className="text-2xl font-bold text-card-foreground">${totalSpent?.toLocaleString()}</p>
+          <p className="text-2xl font-bold text-card-foreground">₹{totalSpent?.toLocaleString()}</p>
           <p className="text-xs text-muted-foreground">
             {((totalSpent / totalBudget) * 100)?.toFixed(1)}% of budget
           </p>
@@ -146,7 +146,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
             </span>
           </div>
           <p className="text-2xl font-bold text-card-foreground">
-            ${Math.abs(remaining)?.toLocaleString()}
+            ₹{Math.abs(remaining)?.toLocaleString()}
           </p>
         </div>
       </div>
@@ -171,7 +171,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
                     <Cell key={`cell-${index}`} fill={entry?.color} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(value) => [`$${value}`, 'Spent']} />
+                <Tooltip formatter={(value) => [`₹${value}`, 'Spent']} />
               </PieChart>
             </ResponsiveContainer>
           </div>
@@ -186,7 +186,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="category" tick={{ fontSize: 12 }} />
                 <YAxis tick={{ fontSize: 12 }} />
-                <Tooltip formatter={(value) => [`$${value}`, '']} />
+                <Tooltip formatter={(value) => [`₹${value}`, '']} />
                 <Bar dataKey="budget" fill="#E5E7EB" name="Budget" />
                 <Bar dataKey="spent" fill="#2563EB" name="Spent" />
               </BarChart>
@@ -202,7 +202,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
             <div className="flex items-center justify-between mb-2">
               <span className="font-medium text-card-foreground capitalize">{category}</span>
               <span className="text-sm text-muted-foreground">
-                ${data?.spent} / ${data?.budget}
+                ₹{data?.spent} / ₹{data?.budget}
               </span>
             </div>
             <div className="w-full bg-muted rounded-full h-2">
@@ -213,7 +213,7 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
             </div>
             <div className="flex justify-between text-xs text-muted-foreground mt-1">
               <span>{((data?.spent / data?.budget) * 100)?.toFixed(1)}% used</span>
-              <span>${data?.budget - data?.spent} remaining</span>
+              <span>₹{data?.budget - data?.spent} remaining</span>
             </div>
           </div>
         ))}
@@ -236,8 +236,8 @@ const BudgetTracker = ({ itinerary, budget, onBudgetUpdate }) => {
                     <p className="text-sm text-muted-foreground mb-2">{opportunity?.description}</p>
                     <div className="flex items-center space-x-4 text-sm">
                       <div className="flex items-center space-x-1 text-success">
-                        <Icon name="DollarSign" size={12} />
-                        <span>Save ${opportunity?.savings}</span>
+                        <Icon name="RupeeSign" size={12} />
+                        <span>Save ₹{opportunity?.savings}</span>
                       </div>
                       <div className="flex items-center space-x-1 text-muted-foreground">
                         <Icon name="Tag" size={12} />

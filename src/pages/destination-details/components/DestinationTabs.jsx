@@ -19,7 +19,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Sunset Beach Walk",
       type: "Outdoor",
       duration: "2 hours",
-      price: 25,
+      price: 2500,
       rating: 4.8,
       image: "https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg",
       description: "Experience breathtaking sunset views along pristine coastline with guided nature commentary.",
@@ -30,7 +30,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Cultural Heritage Tour",
       type: "Cultural",
       duration: "4 hours",
-      price: 45,
+      price: 4500,
       rating: 4.9,
       image: "https://images.pixabay.com/photo/2016/11/29/05/45/architecture-1867187_1280.jpg",
       description: "Immerse yourself in local history and traditions with expert cultural guides.",
@@ -41,7 +41,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Adventure Hiking Trail",
       type: "Adventure",
       duration: "6 hours",
-      price: 65,
+      price: 6500,
       rating: 4.7,
       image: "https://images.unsplash.com/photo-1551632811-561732d1e306",
       description: "Challenge yourself on scenic mountain trails with spectacular panoramic views.",
@@ -55,7 +55,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Oceanview Resort & Spa",
       type: "Resort",
       rating: 4.8,
-      price: 180,
+      price: 3600,
       image: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg",
       amenities: ["Pool", "Spa", "Restaurant", "WiFi"],
       availability: "Available",
@@ -66,7 +66,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Boutique Heritage Hotel",
       type: "Boutique",
       rating: 4.6,
-      price: 120,
+      price: 3000,
       image: "https://images.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg",
       amenities: ["Restaurant", "WiFi", "Parking", "Concierge"],
       availability: "2 rooms left",
@@ -77,7 +77,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Budget Traveler Inn",
       type: "Hostel",
       rating: 4.2,
-      price: 35,
+      price: 1500,
       image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5",
       amenities: ["WiFi", "Kitchen", "Laundry", "Common Area"],
       availability: "Available",
@@ -91,7 +91,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Maria\'s Traditional Kitchen",
       type: "Restaurant",
       rating: 4.9,
-      price: "$$",
+      price: "₹3000",
       image: "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
       specialty: "Authentic local cuisine",
       hours: "11:00 AM - 10:00 PM",
@@ -102,7 +102,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Artisan Craft Market",
       type: "Shopping",
       rating: 4.7,
-      price: "$",
+      price: "₹2500",
       image: "https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg",
       specialty: "Handmade local crafts",
       hours: "9:00 AM - 6:00 PM",
@@ -113,7 +113,7 @@ const DestinationTabs = ({ destination }) => {
       name: "Coastal Coffee Roasters",
       type: "Cafe",
       rating: 4.5,
-      price: "$",
+      price: "₹5000",
       image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb",
       specialty: "Locally roasted coffee",
       hours: "6:00 AM - 8:00 PM",
@@ -217,7 +217,7 @@ const DestinationTabs = ({ destination }) => {
                   </div>
                   <div className="flex items-center space-x-1">
                     <Icon name="DollarSign" size={14} />
-                    <span>${activity?.price}</span>
+                    <span>₹{activity?.price}</span>
                   </div>
                 </div>
               </div>
@@ -279,7 +279,7 @@ const DestinationTabs = ({ destination }) => {
                     <Icon name="Star" size={14} className="text-accent fill-current" />
                     <span className="text-sm font-medium text-foreground">{hotel?.rating}</span>
                   </div>
-                  <div className="text-lg font-bold text-foreground">${hotel?.price}</div>
+                  <div className="text-lg font-bold text-foreground">₹{hotel?.price}</div>
                   <div className="text-xs text-muted-foreground">per night</div>
                 </div>
               </div>

@@ -22,6 +22,12 @@ const NavigationBar = () => {
   }, []);
 
   const navigationItems = [
+    // {
+    //   label: 'Home',
+    //   path: '/home',
+    //   icon: 'Home',
+    //   tooltip: 'Your personalized travel hub'
+    // },
     {
       label: 'Dashboard',
       path: '/dashboard',
@@ -37,6 +43,12 @@ const NavigationBar = () => {
         { label: 'Destinations', path: '/destination-details' },
         { label: 'Itinerary Planner', path: '/itinerary-planner' }
       ]
+    },
+    {
+      label: 'Maps',
+      path: '/maps',
+      icon: 'Map',
+      tooltip: 'Coordinate group travel plans'
     },
     {
       label: 'Groups',
@@ -128,15 +140,9 @@ const NavigationBar = () => {
             ))}
           </div>
 
-          {/* Right Side Actions */}
+         
           <div className="flex items-center space-x-3">
-            {/* Offline Status Indicator */}
-            {isOffline && (
-              <div className="flex items-center space-x-1 px-2 py-1 bg-warning/10 text-warning rounded-md text-xs font-medium">
-                <Icon name="WifiOff" size={12} />
-                <span className="hidden sm:inline">Offline</span>
-              </div>
-            )}
+            
 
             {/* Mobile Menu Button */}
             <Button
@@ -177,7 +183,7 @@ const NavigationBar = () => {
                         <Link
                           key={subItem?.path}
                           to={subItem?.path}
-                          className={`block px-3 py-1 text-sm rounded-md transition-travel ${
+                          className={`block px-3 py-1 text-sm rounded-md transition-travel${
                             location?.pathname === subItem?.path
                               ? 'bg-primary/10 text-primary' :'text-muted-foreground hover:text-foreground hover:bg-muted'
                           }`}
@@ -201,7 +207,7 @@ const NavigationBar = () => {
             <Link
               key={item?.path}
               to={item?.path}
-              className={`flex flex-col items-center justify-center space-y-1 px-2 py-1 rounded-md transition-travel ${
+              className={`flex flex-col items-center justify-center space-y-1 px-2 py-1 rounded-md transition-travel {
                 isActiveRoute(item?.path, item?.subItems)
                   ? 'text-primary' :'text-muted-foreground hover:text-foreground'
               }`}

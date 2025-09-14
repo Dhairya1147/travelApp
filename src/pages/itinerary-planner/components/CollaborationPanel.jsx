@@ -88,9 +88,9 @@ const CollaborationPanel = ({ itinerary, onShare, onCollaboratorAdd, onCommentAd
         title: 'Restaurant Choice for Day 2',
         description: 'Which restaurant should we choose for our Day 2 dinner?',
         options: [
-          { id: 'opt1', text: 'Italian Bistro ($$$)', votes: 2, voters: ['Sarah Johnson', 'You'] },
-          { id: 'opt2', text: 'Local Seafood Place ($$)', votes: 1, voters: ['Emma Wilson'] },
-          { id: 'opt3', text: 'Street Food Market ($)', votes: 0, voters: [] }
+          { id: 'opt1', text: 'Italian Bistro (₹500)', votes: 2, voters: ['Sarah Johnson', 'You'] },
+          { id: 'opt2', text: 'Local Seafood Place (₹200)', votes: 1, voters: ['Emma Wilson'] },
+          { id: 'opt3', text: 'Street Food Market (₹500)', votes: 0, voters: [] }
         ],
         status: 'active',
         createdBy: 'You',

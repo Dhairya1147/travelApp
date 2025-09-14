@@ -28,11 +28,11 @@ const GroupFilters = ({ filters, onFiltersChange, onClearFilters }) => {
 
   const budgetRangeOptions = [
     { value: '', label: 'Any Budget' },
-    { value: '0-500', label: 'Under $500' },
-    { value: '500-1000', label: '$500 - $1,000' },
-    { value: '1000-2000', label: '$1,000 - $2,000' },
-    { value: '2000-5000', label: '$2,000 - $5,000' },
-    { value: '5000+', label: 'Over $5,000' }
+    { value: '0-5000', label: 'Under ₹5000' },
+    { value: '5000-10000', label: '₹5000 - ₹10,000' },
+    { value: '10000-20000', label: '₹10,000 - ₹20,000' },
+    { value: '20000-50000', label: '₹20,000 - ₹50,000' },
+    { value: '50000+', label: 'Over ₹50,000' }
   ];
 
   const durationOptions = [

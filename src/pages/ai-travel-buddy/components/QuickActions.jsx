@@ -8,7 +8,7 @@ const QuickActions = ({ onActionClick, userLocation, currentTime }) => {
       id: 'restaurant',
       label: 'Find Restaurants',
       icon: 'UtensilsCrossed',
-      description: 'Nearby dining options',
+      description: 'Nearby dining',
       color: 'bg-orange-500',
       query: 'Find restaurants near me with good ratings'
     },
@@ -94,7 +94,7 @@ const QuickActions = ({ onActionClick, userLocation, currentTime }) => {
       {/* Quick Actions Grid */}
       <div>
         <h3 className="text-sm font-medium text-foreground mb-3">Quick Actions</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 gap-4">
           {quickActions?.map((action) => (
             <Button
               key={action?.id}
@@ -116,7 +116,6 @@ const QuickActions = ({ onActionClick, userLocation, currentTime }) => {
       {/* Contextual Suggestions */}
       {activeContextualSuggestions?.length > 0 && (
         <div>
-          <h3 className="text-sm font-medium text-foreground mb-3">Right Now</h3>
           <div className="flex flex-wrap gap-2">
             {activeContextualSuggestions?.map((suggestion) => (
               <Button

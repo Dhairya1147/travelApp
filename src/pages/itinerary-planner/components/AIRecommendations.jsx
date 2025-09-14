@@ -66,7 +66,7 @@ const AIRecommendations = ({ destination, budget, preferences, onApplyRecommenda
             type: 'accommodation',
             category: 'budget',
             title: 'Boutique Hostel Upgrade',
-            description: 'Switch to a highly-rated boutique hostel with private rooms. Save $80/night while gaining local experience.',
+            description: 'Switch to a highly-rated boutique hostel with private rooms. Save ₹800/night while gaining local experience.',
             reason: 'Balances comfort, budget, and authentic local experience',
             cost: -80,
             duration: 0,
@@ -233,9 +233,8 @@ const AIRecommendations = ({ destination, budget, preferences, onApplyRecommenda
               {/* Details */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                 <div className="flex items-center space-x-2 text-sm">
-                  <Icon name="DollarSign" size={14} className="text-muted-foreground" />
                   <span className={recommendation?.cost < 0 ? 'text-success' : 'text-card-foreground'}>
-                    {recommendation?.cost < 0 ? `Save $${Math.abs(recommendation?.cost)}` : `$${recommendation?.cost}`}
+                    {recommendation?.cost < 0 ? `Save ₹${Math.abs(recommendation?.cost)}` : `₹${recommendation?.cost}`}
                   </span>
                 </div>
                 {recommendation?.duration > 0 && (

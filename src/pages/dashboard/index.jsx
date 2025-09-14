@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   // Mock user data
   const userData = {
-    name: "Alex Johnson",
+    name: "Dhairya Gupta",
     currentTrip: {
       destination: "Tokyo, Japan",
       daysLeft: 12

@@ -14,9 +14,9 @@ const TravelPreferences = ({ preferences, onUpdatePreferences }) => {
   ];
 
   const budgetRanges = [
-    { id: 'budget', label: 'Budget Traveler', range: '$50-150/day', description: 'Hostels, local transport, street food' },
-    { id: 'mid', label: 'Mid-Range', range: '$150-300/day', description: 'Hotels, mix of activities, restaurant dining' },
-    { id: 'luxury', label: 'Luxury', range: '$300+/day', description: 'Premium accommodations, exclusive experiences' }
+    { id: 'budget', label: 'Budget Traveler', range: '₹500-1500/day', description: 'Hostels, local transport, street food' },
+    { id: 'mid', label: 'Mid-Range', range: '₹1500-3000/day', description: 'Hotels, mix of activities, restaurant dining' },
+    { id: 'luxury', label: 'Luxury', range: '₹3000+/day', description: 'Premium accommodations, exclusive experiences' }
   ];
 
   const accommodationTypes = [

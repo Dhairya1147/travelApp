@@ -16,13 +16,13 @@ import Icon from '../../components/AppIcon';
 const UserProfile = () => {
   const [activeTab, setActiveTab] = useState('profile');
   const [userData, setUserData] = useState({
-    name: "Sarah Johnson",
-    email: "sarah.johnson@email.com",
-    phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA",
+    name: "Dhairya Gupta",
+    email: "dhairyagupta@email.com",
+    phone: "+91 5848548546",
+    location: "Bhopal, MP",
     bio: `Passionate traveler and adventure seeker with a love for discovering hidden gems around the world. I enjoy immersive cultural experiences, local cuisine, and connecting with fellow travelers. Always planning my next adventure!`,
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-    memberSince: "March 2022",
+    memberSince: "March 2002",
     totalTrips: 24,
     verifications: {
       email: true,
@@ -213,22 +213,22 @@ const UserProfile = () => {
     {
       id: '1',
       type: 'passport',
-      name: 'US Passport',
+      name: 'Indian Passport',
       number: 'P123456789',
       issueDate: '2019-05-15',
       expiryDate: '2029-05-15',
-      issuingCountry: 'United States',
+      issuingCountry: 'India',
       verified: true,
       uploadDate: '2024-01-10T10:00:00Z'
     },
     {
       id: '2',
       type: 'drivingLicense',
-      name: 'California Driver License',
+      name: 'Indian Driver License',
       number: 'D1234567',
       issueDate: '2020-03-20',
       expiryDate: '2025-03-20',
-      issuingCountry: 'United States',
+      issuingCountry: 'India',
       verified: true,
       uploadDate: '2024-01-10T10:05:00Z'
     },

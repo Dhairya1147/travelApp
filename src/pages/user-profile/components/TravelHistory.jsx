@@ -59,7 +59,7 @@ const TravelHistory = ({ travelHistory }) => {
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Icon name="DollarSign" size={12} />
-              <span>${trip?.totalCost?.toLocaleString()}</span>
+              <span>₹{trip?.totalCost?.toLocaleString()}</span>
             </div>
           </div>
           {trip?.highlights && trip?.highlights?.length > 0 && (
@@ -116,7 +116,7 @@ const TravelHistory = ({ travelHistory }) => {
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Icon name="DollarSign" size={14} className="text-muted-foreground" />
-                <span>${trip?.totalCost?.toLocaleString()} total cost</span>
+                <span>₹{trip?.totalCost?.toLocaleString()} total cost</span>
               </div>
             </div>
           </div>

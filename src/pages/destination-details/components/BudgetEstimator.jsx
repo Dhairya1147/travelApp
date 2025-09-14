@@ -31,9 +31,9 @@ const BudgetEstimator = ({ destination }) => {
   ];
 
   const costMultipliers = {
-    budget: { accommodation: 35, food: 25, activities: 20, transport: 15, miscellaneous: 10 },
-    'mid-range': { accommodation: 120, food: 60, activities: 45, transport: 30, miscellaneous: 25 },
-    luxury: { accommodation: 300, food: 150, activities: 100, transport: 80, miscellaneous: 70 }
+    budget: { accommodation: 3500, food: 2500, activities: 2000, transport: 1500, miscellaneous: 1000 },
+    'mid-range': { accommodation: 6000, food: 5000, activities: 4500, transport: 3000, miscellaneous: 2500 },
+    luxury: { accommodation: 12000, food: 7500, activities: 8000, transport: 8000, miscellaneous: 7000 }
   };
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const BudgetEstimator = ({ destination }) => {
         type: 'timing',
         icon: 'Calendar',
         title: 'Better timing available',
-        description: 'Visit in February to save $200 on overall costs',
+        description: 'Visit in February to save ₹2000 on overall costs',
         savings: 200
       },
       {
@@ -107,9 +107,9 @@ const BudgetEstimator = ({ destination }) => {
   };
 
   const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
       minimumFractionDigits: 0
     })?.format(amount);
   };

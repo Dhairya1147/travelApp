@@ -5,14 +5,14 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 const BudgetTracker = () => {
   const budgetData = [
-    { name: 'Flights', value: 1200, color: '#2563EB' },
-    { name: 'Hotels', value: 800, color: '#059669' },
-    { name: 'Food', value: 400, color: '#F59E0B' },
-    { name: 'Activities', value: 300, color: '#DC2626' },
-    { name: 'Transport', value: 200, color: '#7C3AED' }
+    { name: 'Flights', value: 12000, color: '#2563EB' },
+    { name: 'Hotels', value: 8000, color: '#059669' },
+    { name: 'Food', value: 4000, color: '#F59E0B' },
+    { name: 'Activities', value: 3000, color: '#DC2626' },
+    { name: 'Transport', value: 2000, color: '#7C3AED' }
   ];
 
-  const totalBudget = 3500;
+  const totalBudget = 35000;
   const totalSpent = budgetData?.reduce((sum, item) => sum + item?.value, 0);
   const remaining = totalBudget - totalSpent;
   const spentPercentage = (totalSpent / totalBudget) * 100;
@@ -20,17 +20,17 @@ const BudgetTracker = () => {
   const aiSavings = [
     {
       title: "Alternative Flight Route",
-      savings: "$150",
+      savings: "₹1500",
       description: "Found cheaper connecting flight via Amsterdam"
     },
     {
       title: "Off-Peak Hotel Booking",
-      savings: "$80",
+      savings: "₹800",
       description: "Book 2 days earlier for better rates"
     },
     {
       title: "Local Transport Pass",
-      savings: "$45",
+      savings: "₹450",
       description: "Weekly pass cheaper than daily tickets"
     }
   ];
@@ -42,7 +42,7 @@ const BudgetTracker = () => {
         <div className="bg-card border border-border rounded-lg p-3 shadow-travel-modal">
           <p className="font-medium">{data?.name}</p>
           <p className="text-sm text-muted-foreground">
-            ${data?.value?.toLocaleString()}
+            ₹{data?.value?.toLocaleString()}
           </p>
         </div>
       );
@@ -75,15 +75,15 @@ const BudgetTracker = () => {
           <div className="flex items-center justify-between mb-4">
             <div>
               <p className="text-2xl font-bold text-foreground">
-                ${totalSpent?.toLocaleString()}
+                ₹{totalSpent?.toLocaleString()}
               </p>
               <p className="text-sm text-muted-foreground">
-                of ${totalBudget?.toLocaleString()} budget
+                of ₹{totalBudget?.toLocaleString()} budget
               </p>
             </div>
             <div className="text-right">
               <p className="text-lg font-semibold text-success">
-                ${remaining?.toLocaleString()}
+                ₹{remaining?.toLocaleString()}
               </p>
               <p className="text-sm text-muted-foreground">remaining</p>
             </div>
@@ -118,7 +118,7 @@ const BudgetTracker = () => {
                   <span className="text-sm font-medium">{item?.name}</span>
                 </div>
                 <span className="text-sm font-medium">
-                  ${item?.value?.toLocaleString()}
+                  ₹{item?.value?.toLocaleString()}
                 </span>
               </div>
             ))}
@@ -173,7 +173,7 @@ const BudgetTracker = () => {
               <div className="flex items-center space-x-2">
                 <Icon name="TrendingDown" size={16} className="text-success" />
                 <span className="text-sm font-medium text-success">
-                  Total Potential Savings: $275
+                  Total Potential Savings: ₹2750
                 </span>
               </div>
             </div>

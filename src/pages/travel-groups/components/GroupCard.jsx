@@ -76,7 +76,7 @@ const GroupCard = ({ group, onJoinGroup, onLeaveGroup, currentUserId }) => {
           <div className="flex items-center space-x-2 text-sm">
             <Icon name="DollarSign" size={14} className="text-primary" />
             <span className="text-muted-foreground">Budget:</span>
-            <span className="font-medium text-card-foreground">${group?.budget}</span>
+            <span className="font-medium text-card-foreground">₹{group?.budget}</span>
           </div>
           <div className="flex items-center space-x-2 text-sm">
             <Icon name="Clock" size={14} className="text-primary" />

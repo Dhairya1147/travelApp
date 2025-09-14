@@ -252,7 +252,7 @@ const ActivityEditor = ({ activity, isOpen, onClose, onSave, onDelete }) => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Input
-                label="Cost ($)"
+                label="Cost (₹)"
                 type="number"
                 value={formData?.cost}
                 onChange={(e) => handleInputChange('cost', e?.target?.value)}

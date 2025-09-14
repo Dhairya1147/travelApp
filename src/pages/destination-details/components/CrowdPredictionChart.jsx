@@ -64,7 +64,7 @@ const CrowdPredictionChart = ({ destination }) => {
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-accent rounded-full" />
                 <span className="text-sm text-muted-foreground">
-                  Avg Cost: ${payload?.[1]?.value}
+                  Avg Cost: ₹{payload?.[1]?.value}
                 </span>
               </div>
             )}
@@ -160,7 +160,7 @@ const CrowdPredictionChart = ({ destination }) => {
                 <span className="text-sm text-foreground">{month?.month}</span>
                 <div className="flex items-center space-x-2">
                   <span className="text-xs text-success font-medium">{month?.crowdLevel}% crowd</span>
-                  <span className="text-xs text-muted-foreground">${month?.avgCost}/day</span>
+                  <span className="text-xs text-muted-foreground">₹{month?.avgCost}/day</span>
                 </div>
               </div>
             ))}
@@ -179,7 +179,7 @@ const CrowdPredictionChart = ({ destination }) => {
                 <span className="text-sm text-foreground">{month?.month}</span>
                 <div className="flex items-center space-x-2">
                   <span className="text-xs text-warning font-medium">{month?.crowdLevel}% crowd</span>
-                  <span className="text-xs text-muted-foreground">${month?.avgCost}/day</span>
+                  <span className="text-xs text-muted-foreground">₹{month?.avgCost}/day</span>
                 </div>
               </div>
             ))}

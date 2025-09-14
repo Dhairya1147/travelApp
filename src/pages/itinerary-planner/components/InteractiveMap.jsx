@@ -229,7 +229,7 @@ const InteractiveMap = ({ itinerary, onLocationSelect, onRouteOptimize }) => {
                       <h4 className="font-medium text-card-foreground">{location?.title}</h4>
                       <p className="text-sm text-muted-foreground">{location?.location}</p>
                       <div className="flex items-center space-x-3 mt-1">
-                        <span className="text-xs text-muted-foreground">${location?.cost}</span>
+                        <span className="text-xs text-muted-foreground">₹{location?.cost}</span>
                         <span className={`text-xs px-2 py-1 rounded-full ${
                           location?.crowdLevel === 'low' ? 'bg-success/10 text-success' :
                           location?.crowdLevel === 'medium'? 'bg-warning/10 text-warning' : 'bg-error/10 text-error'
@@ -278,7 +278,7 @@ const InteractiveMap = ({ itinerary, onLocationSelect, onRouteOptimize }) => {
                   {route?.savings > 0 && (
                     <div className="flex items-center space-x-1 text-success">
                       <Icon name="DollarSign" size={12} />
-                      <span>Save ${route?.savings}</span>
+                      <span>Save ₹{route?.savings}</span>
                     </div>
                   )}
                 </div>

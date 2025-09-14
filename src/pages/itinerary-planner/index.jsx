@@ -32,12 +32,12 @@ const ItineraryPlanner = () => {
   });
 
   const [budget, setBudget] = useState({
-    accommodation: 1200,
-    activities: 800,
-    transportation: 600,
-    meals: 900,
-    shopping: 400,
-    miscellaneous: 300
+    accommodation: 12000,
+    activities: 8000,
+    transportation: 6000,
+    meals: 9000,
+    shopping: 4000,
+    miscellaneous: 3000
   });
 
   const [preferences, setPreferences] = useState({
@@ -75,7 +75,7 @@ const ItineraryPlanner = () => {
               startTime: '17:00',
               endTime: '18:30',
               duration: 90,
-              cost: 45,
+              cost: 450,
               crowdLevel: 'medium',
               status: 'planned',
               type: 'activity',
@@ -88,7 +88,7 @@ const ItineraryPlanner = () => {
               startTime: '19:30',
               endTime: '21:30',
               duration: 120,
-              cost: 85,
+              cost: 850,
               crowdLevel: 'high',
               status: 'planned',
               type: 'restaurant',
@@ -106,7 +106,7 @@ const ItineraryPlanner = () => {
               startTime: '09:00',
               endTime: '12:00',
               duration: 180,
-              cost: 25,
+              cost: 250,
               crowdLevel: 'high',
               status: 'planned',
               type: 'attraction',
@@ -119,7 +119,7 @@ const ItineraryPlanner = () => {
               startTime: '13:00',
               endTime: '14:30',
               duration: 90,
-              cost: 35,
+              cost: 350,
               crowdLevel: 'medium',
               status: 'planned',
               type: 'restaurant',
@@ -132,7 +132,7 @@ const ItineraryPlanner = () => {
               startTime: '16:00',
               endTime: '18:00',
               duration: 120,
-              cost: 30,
+              cost: 300,
               crowdLevel: 'high',
               status: 'planned',
               type: 'attraction',
@@ -150,7 +150,7 @@ const ItineraryPlanner = () => {
               startTime: '10:00',
               endTime: '13:00',
               duration: 180,
-              cost: 20,
+              cost: 200,
               crowdLevel: 'medium',
               status: 'planned',
               type: 'activity',
@@ -163,7 +163,7 @@ const ItineraryPlanner = () => {
               startTime: '15:00',
               endTime: '17:30',
               duration: 150,
-              cost: 200,
+              cost: 2000,
               crowdLevel: 'high',
               status: 'planned',
               type: 'shopping',

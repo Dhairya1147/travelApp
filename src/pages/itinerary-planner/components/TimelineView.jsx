@@ -158,8 +158,7 @@ const TimelineView = ({ itinerary, onUpdateItinerary, onActivitySelect }) => {
                                     <span>{activity?.startTime} - {activity?.endTime}</span>
                                   </div>
                                   <div className="flex items-center space-x-1">
-                                    <Icon name="DollarSign" size={12} />
-                                    <span>${activity?.cost}</span>
+                                    <span>₹{activity?.cost}</span>
                                   </div>
                                   <div className="flex items-center space-x-1">
                                     <Icon name="Users" size={12} />

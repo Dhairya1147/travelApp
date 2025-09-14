@@ -231,7 +231,7 @@ const DocumentManager = ({ documents, onUpdateDocuments }) => {
           type="text"
           value={newDocument?.name}
           onChange={(e) => setNewDocument(prev => ({ ...prev, name: e?.target?.value }))}
-          placeholder="e.g., US Passport"
+          placeholder="e.g., Indian Passport"
           required
         />
         <Input

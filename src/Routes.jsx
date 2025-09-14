@@ -17,7 +17,7 @@ const Routes = () => {
       <ScrollToTop />
       <RouterRoutes>
         {/* Define your route here */}
-        <Route path="/" element={<AITravelBuddyPage />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/travel-groups" element={<TravelGroups />} />
         <Route path="/destination-details" element={<DestinationDetails />} />
         <Route path="/dashboard" element={<Dashboard />} />

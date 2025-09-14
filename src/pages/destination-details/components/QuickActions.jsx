@@ -13,20 +13,20 @@ const QuickActions = ({ destination, onCreateItinerary }) => {
 
   const handleShare = (platform) => {
     const url = window.location?.href;
-    const text = `Check out ${destination?.name} - an amazing travel destination!`;
+    const text = `Check out ₹{destination?.name} - an amazing travel destination!`;
     
     switch (platform) {
       case 'copy':
         navigator.clipboard?.writeText(url);
         break;
       case 'whatsapp':
-        window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`);
+        window.open(`https://wa.me/?text=₹{encodeURIComponent(text + ' ' + url)}`);
         break;
       case 'facebook':
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=₹{encodeURIComponent(url)}`);
         break;
       case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`);
+        window.open(`https://twitter.com/intent/tweet?text=₹{encodeURIComponent(text)}&url=₹{encodeURIComponent(url)}`);
         break;
       default:
         break;
@@ -69,12 +69,12 @@ const QuickActions = ({ destination, onCreateItinerary }) => {
             <Button
               variant={action?.variant}
               onClick={action?.onClick}
-              className={`w-full ${action?.className || ''}`}
+              className={`w-full ₹{action?.className || ''}`}
             >
               <Icon 
                 name={action?.icon} 
                 size={16} 
-                className={`mr-2 ${action?.id === 'save' && isSaved ? 'fill-current' : ''}`} 
+                className={`mr-2 ₹{action?.id === 'save' && isSaved ? 'fill-current' : ''}`} 
               />
               {action?.label}
             </Button>
