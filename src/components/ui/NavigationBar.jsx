@@ -48,7 +48,7 @@ const NavigationBar = () => {
       label: 'Maps',
       path: '/maps',
       icon: 'Map',
-      tooltip: 'Coordinate group travel plans'
+      tooltip: 'Best location based suggestions'
     },
     {
       label: 'Groups',
